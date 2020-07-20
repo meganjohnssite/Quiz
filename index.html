@@ -12,6 +12,11 @@
 
 	<style>
 
+    #myForm{
+	display: none;
+    padding: 10px;
+    }
+
     h1{
         color:#0677A1;
         font-style: italic;
@@ -32,7 +37,9 @@
                 color: #940f15;
             }
             
-
+    .btn-info{
+        margin: 5px;
+    }
 	</style>
 </head>
 <body>
@@ -54,8 +61,8 @@
                 
                 
             </div>
-
-                <div class="form-group">    
+            <button onclick="beginQuiz();" class="btn btn-info">Begin Quiz</button>
+                <div class="form-group" id="myForm">    
                     <div class="row">
                         <div class="col-md-12 mb-3">
                             <label for="q1">Q1. <em>"We were on a break!"</em></label>
@@ -112,6 +119,10 @@
     
 <script>
 
+    function beginQuiz(){
+	let begin = document.getElementById("myForm");
+    begin.style.display= "block";
+    }
 
     function getAnswers(field) {
         console.log(field);
